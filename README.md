@@ -1,1 +1,2 @@
-# just for educational purposes
+# Just for educational purposes
+## Welcome :)
