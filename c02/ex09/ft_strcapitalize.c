@@ -29,10 +29,11 @@ char	*ft_strcapitalize(char *str)
 #include <stdio.h>
 int main()
 {
-	int i;
 	char str[] = "Salut, Comment Tu Vas ? 42mots Quarante-Deux; Cinquante+Et+Un";
 
 	ft_strcapitalize(str);
 	
 	printf("%s", str);
+
+	return (0);
 }
