@@ -3,45 +3,39 @@
 int	*ft_range(int min, int max)
 {
 	int i;
-	int size;
-
-	i = 0;
+	int len;
+	int *dup;
 
 	if (min >= max)
 		return (NULL);
 	
-	size = max - min;
+	len = max - min;
 
-	int *range = malloc(sizeof(int) * size);
+	dup = malloc(sizeof(int) * len);
 	
-	if (range == NULL)
+	if (dup == NULL)
 		return (NULL);
-
-	while (i < size)
-	{
-		range[i] = min + i;
-		i++;
-	}
-	range[i] = '\0';
-	return (range);
-}
-
-#include <stdio.h>
-
-int main()
-{
-	int i;
-	int *result;
-	
 	i = 0;
-
-	result = ft_range(5, 10);
-
-	while (result[i])
+	while (i < len)
 	{
-		printf("%d", result[i]);
+		dup[i] = min + i;
 		i++;
 	}
-	free(result);
-	return (0);
+	return (dup);
 }
+
+//int main()
+//{
+//	int *dup = ft_range(3, 9);
+//	int i;
+
+//	i = 0;
+
+//	while (i < 9 - 3)
+//	{
+//		printf("%d", dup[i]);
+//		i++;
+//	}
+//	free(dup);
+//	return (0);
+//}
